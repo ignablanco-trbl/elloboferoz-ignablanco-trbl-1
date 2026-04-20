@@ -1,3 +1,5 @@
+import caperucita.*
+
 object feroz{
 var peso = 10
 

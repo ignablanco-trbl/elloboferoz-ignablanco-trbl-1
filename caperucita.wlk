@@ -1,38 +1,43 @@
-object caperucita {
-    var cantidadManzanas = 6
-    
-    method peso() {
-        return 60 + (cantidadManzanas * 0.2)
-    }
-    
-    method perderManzana() {
-        cantidadManzanas = 0.max(cantidadManzanas - 1) 
+object caperucita{
+    method peso(){
+        return 60 + canasta.peso()
     }
 }
 
-object abuelita {
-    method peso() {
+object canasta{
+  var cantidadManzanas = 6
+  method peso() {
+        return 0 + (cantidadManzanas * 0.2)
+    }
+    
+  method perderManzana(){
+    cantidadManzanas = 0.max(cantidadManzanas - 1)
+  }
+}
+
+object abuelita{
+    method peso(){
         return 50
     }
 }
 
-object cazador {
-    method peso() {
+object cazador{
+    method peso(){
         return 90
     }
     
-    method asustar(unLobo) {
+    method asustar(unLobo){
         unLobo.sufrirUnaCrisis()
     }
 }
 
 // Escenarios y comida extra del cuento
-object bosque {}
+object bosque{}
 
-object casaAbuelita {}
+object casaAbuelita{}
 
-object hamburguesa {
-    method peso() {
+object hamburguesa{
+    method peso(){
         return 20
     }
 }
